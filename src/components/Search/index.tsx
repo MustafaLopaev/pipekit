@@ -2,7 +2,7 @@ import './index.css';
 
 import SearchIcon from '@mui/icons-material/Search';
 
-interface SearchInterface {}
+import { SearchInterface } from './index.d';
 
 export function Search({}: SearchInterface) {
   return (

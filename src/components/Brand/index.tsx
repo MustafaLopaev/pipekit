@@ -1,8 +1,7 @@
 import './index.css';
 import AgricultureIcon from '@mui/icons-material/Agriculture';
-interface BrandInterface {
-  title: string;
-}
+import { BrandInterface } from './index.d';
+
 export function Brand({ title }: BrandInterface) {
   return (
     <div className="navbar-brand brand-container">

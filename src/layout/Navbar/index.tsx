@@ -9,7 +9,7 @@ import { Brand } from '../../components/Brand';
 import { Search } from '../../components/Search';
 import { MainMenu } from './Menu';
 
-interface NavbarInterface {}
+import { NavbarInterface } from './index.d';
 
 const Navbar = ({}: NavbarInterface) => {
   const [isOpen, setIsOpen] = useState<any>({

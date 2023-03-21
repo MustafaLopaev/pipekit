@@ -1,0 +1,10 @@
+.card-header {
+  padding: 0 !important;
+  border-bottom-color: rgb(77, 44, 44);
+}
+
+.button-header {
+  background: transparent;
+  border: 0;
+  color: white;
+}

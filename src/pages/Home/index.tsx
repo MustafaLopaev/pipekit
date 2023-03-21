@@ -1,10 +1,9 @@
 import './index.css';
 
-// Interface for props
-interface HomeInterface {}
+import { HomeInterface } from './index.d';
 
 /* Home page is used to display the general data. */
-const Home = (props: HomeInterface) => {
+const Home = ({}: HomeInterface) => {
   return (
     <div id="homePage" className="base-container">
       Home Page

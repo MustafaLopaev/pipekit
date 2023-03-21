@@ -1,6 +1,6 @@
 import './index.css';
-
-const Status404 = () => {
+import { Status404Interface } from './index.d';
+const Status404 = ({}: Status404Interface) => {
   return <div>Error</div>;
 };
 

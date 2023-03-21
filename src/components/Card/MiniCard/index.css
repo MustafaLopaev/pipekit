@@ -1,0 +1,7 @@
+.mini-card-divider {
+  border-right: 1px solid rgb(77, 44, 44);
+}
+
+.mini-card-container {
+  width: 320px !important;
+}

@@ -1,9 +1,6 @@
 import NProgress from 'nprogress';
 import { useEffect } from 'react';
-
-interface SuspenseLoaderInterface {
-  title?: string;
-}
+import { SuspenseLoaderInterface } from './index.d';
 
 export function SuspenseLoader({
   title = '...Loading',
