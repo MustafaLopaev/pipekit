@@ -2,6 +2,8 @@ import './index.css';
 
 import MiniCard from '../../components/Card/MiniCard';
 import { DashboardInterface } from './index.d';
+import TimeLineChart from '../../components/Charts/TimeLine';
+import BubbleChart from '../../components/Charts/Bubble';
 
 /* Dashboard page is used to display the general data. */
 const Dashboard = (props: DashboardInterface) => {
@@ -21,6 +23,21 @@ const Dashboard = (props: DashboardInterface) => {
           <MiniCard value={123.42} />
         </div>
       </div>
+      <div className="row">
+        <div className="col-xl-8 col-lg-7">
+          <TimeLineChart title="Time Line Chart" />
+        </div>
+        <div className="col-xl-4 col-lg-5">
+          <div className="row">
+            <div className="col">
+              <BubbleChart title="Buble Chart" />
+            </div>
+            <div className="col">
+              <BubbleChart title="Buble Chart" />
+            </div>
+          </div>
+        </div>
+      </div>{' '}
     </div>
   );
 };

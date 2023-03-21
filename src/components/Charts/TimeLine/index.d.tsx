@@ -1,1 +1,3 @@
-export interface TimeLineInterface {}
+export interface TimeLineInterface {
+  title?: string;
+}

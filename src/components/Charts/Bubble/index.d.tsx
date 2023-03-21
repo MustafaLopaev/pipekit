@@ -1,1 +1,3 @@
-export interface BubbleChartInterface {}
+export interface BubbleChartInterface {
+  title?: string;
+}

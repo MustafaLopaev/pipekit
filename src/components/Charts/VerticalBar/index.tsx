@@ -2,72 +2,70 @@ import './index.css';
 
 import { faker } from '@faker-js/faker';
 import {
+  BarElement,
   CategoryScale,
   Chart as ChartJS,
   Legend,
   LinearScale,
-  LineElement,
-  PointElement,
   Title,
   Tooltip,
 } from 'chart.js';
-
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 import CardHeader from '../../Card/Header';
-import { TimeLineInterface } from './index.d';
+import { VerticalBarChartInterface } from './index.d';
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend
 );
-const options = {
+
+export const options = {
   responsive: true,
-  type: 'line',
   plugins: {
-    title: {
-      display: false,
+    legend: {
+      position: 'top' as const,
     },
-  },
-  interaction: {
-    mode: 'index' as 'index',
-    intersect: false,
+    title: {
+      display: true,
+      text: 'Chart.js Bar Chart',
+    },
   },
 };
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
-const data = {
+export const data = {
   labels,
   datasets: [
     {
       label: 'Dataset 1',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(255, 99, 132)',
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
     },
     {
       label: 'Dataset 2',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(53, 162, 235)',
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
     },
   ],
 };
-const TimeLineChart = ({ title = 'Title' }: TimeLineInterface) => {
+
+const VerticalBarChart = ({ title = 'Title' }: VerticalBarChartInterface) => {
   return (
     <div className="card p-3 mb-2">
       <CardHeader title={title} />
       <div className="card-body">
-        <div className="">
-          <Line options={options} data={data} />
+        <div className="vertical-bar-container chart-container">
+          <Bar options={options} data={data} />
         </div>
       </div>
     </div>
   );
 };
-export default TimeLineChart;
+
+export default VerticalBarChart;

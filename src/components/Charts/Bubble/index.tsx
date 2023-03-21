@@ -13,9 +13,11 @@ import { Bubble } from 'react-chartjs-2';
 
 import CardHeader from '../../Card/Header';
 import { BubbleChartInterface } from './index.d';
+
 ChartJS.register(LinearScale, PointElement, Tooltip, Legend);
 
 const options = {
+  responsive: true,
   scales: {
     y: {
       beginAtZero: true,
@@ -46,10 +48,10 @@ const data = {
   ],
 };
 
-const BubbleChart = ({}: BubbleChartInterface) => {
+const BubbleChart = ({ title = 'Title' }: BubbleChartInterface) => {
   return (
     <div className="card p-3 mb-2">
-      <CardHeader title={'title'} />
+      <CardHeader title={title} />
       <div className="card-body">
         <div className="">
           <Bubble options={options} data={data} />
