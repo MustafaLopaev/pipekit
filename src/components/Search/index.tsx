@@ -2,7 +2,9 @@ import './index.css';
 
 import SearchIcon from '@mui/icons-material/Search';
 
-const Search = () => {
+interface SearchInterface {}
+
+export function Search({}: SearchInterface) {
   return (
     <div className="search-container">
       <input
@@ -16,5 +18,4 @@ const Search = () => {
       </button>
     </div>
   );
-};
-export default Search;
+}

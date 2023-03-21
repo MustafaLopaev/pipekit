@@ -1,12 +1,12 @@
 import { lazy, Suspense } from 'react';
 
-import SupenseLoader from './components/Loader/Suspense';
+import { SuspenseLoader } from './components/Loader/Suspense';
 import Navbar from './layout/Navbar';
 
 // Used to load the component
 const Loader = (Component: any) => (props: any) =>
   (
-    <Suspense fallback={<SupenseLoader />}>
+    <Suspense fallback={<SuspenseLoader />}>
       <Component {...props} />
     </Suspense>
   );

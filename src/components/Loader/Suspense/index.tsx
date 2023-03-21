@@ -1,7 +1,13 @@
 import NProgress from 'nprogress';
 import { useEffect } from 'react';
 
-function SuspenseLoader() {
+interface SuspenseLoaderInterface {
+  title?: string;
+}
+
+export function SuspenseLoader({
+  title = '...Loading',
+}: SuspenseLoaderInterface) {
   useEffect(() => {
     NProgress.start();
 
@@ -10,7 +16,5 @@ function SuspenseLoader() {
     };
   }, []);
 
-  return <p>...Loading</p>;
+  return <p>{title}</p>;
 }
-
-export default SuspenseLoader;

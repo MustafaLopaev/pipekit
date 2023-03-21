@@ -6,12 +6,12 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import { Brand } from '../../components/Brand';
-import Search from '../../components/Search';
+import { Search } from '../../components/Search';
 import { MainMenu } from './Menu';
 
 interface NavbarInterface {}
 
-const Navbar = (props: NavbarInterface) => {
+const Navbar = ({}: NavbarInterface) => {
   const [isOpen, setIsOpen] = useState<any>({
     toggle: false,
   });
