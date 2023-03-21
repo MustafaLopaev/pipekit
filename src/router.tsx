@@ -23,7 +23,7 @@ const routes = () => [
     children: [
       {
         path: '/',
-        element: <Home />,
+        element: <Dashboard />,
       },
       {
         path: '/dashboard',

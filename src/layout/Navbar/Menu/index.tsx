@@ -20,6 +20,10 @@ const MainMenu: MainMenuInterface[] = [
     name: 'Dashboard',
     link: '/dashboard',
   },
+  {
+    name: 'Not Exists',
+    link: '/not-exists',
+  },
 ];
 // Sub Menu components
 const SubMenu: SubMenuInterface[] = [];
