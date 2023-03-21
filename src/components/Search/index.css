@@ -1,0 +1,65 @@
+.search-container {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.search-bar {
+  height: 30px;
+  width: 200px;
+  border-radius: 0;
+  color: black;
+  letter-spacing: 1px;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  background-color: #626161;
+  font-family: 'Niconne', cursive;
+  font-size: 18px;
+  border: none;
+  margin-left: 40px;
+  border-radius: 10px 0 10px 0;
+}
+
+.search-bar::placeholder {
+  font-size: 18px;
+  font-weight: 100;
+  font-family: 'Niconne', cursive;
+  color: rgb(150, 155, 160);
+}
+
+.search-bar:focus {
+  width: 300px;
+  background-color: rgb(52, 49, 49);
+  border-bottom: 1px wheat rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  color: rgb(255, 244, 244);
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+.search-bar:focus::placeholder {
+  color: rgb(255, 255, 255) !important;
+}
+
+.search-btn {
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  right: 0px;
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
+}
+
+.search-bar:focus ~ .search-btn {
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  color: red;
+  border: 2px dashed red;
+}
